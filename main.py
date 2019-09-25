@@ -5,13 +5,13 @@ pygame.init()
 pygame.display.set_caption("wireWorld")
 clock = pygame.time.Clock()
 
-windowSize = [518, 518]  # windows size, will be changed later
+windowSize = [518, 518]  # windows size
 screen = pygame.display.set_mode(windowSize)  # display
 myFont = pygame.font.SysFont("Times New Roman", 18)  # font
 
 width = 8  # size of the grid in px
 height = 8
-margin = 1  # margin between the grid, i think i should remove it later
+margin = 1  # margin between the grid
 
 hSize = 48  # amount of grids
 wSize = 48
