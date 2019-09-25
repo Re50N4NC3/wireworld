@@ -69,9 +69,9 @@ arrType = 3
 partData[arrType][0] = "Tail"
 partData[arrType][1] = c_blue
 
-changeCounter = 0
-timer = 0
-stepTime = 1
+changeCounter = 0  # amount of changes around tile
+timer = 0  # grid loop timer, to allow multiple checks after state change
+stepTime = 1  # time between state changes
 
 while True:  # initial loop ________________________________________________________________________________
     screen.fill(c_black)
@@ -147,9 +147,8 @@ while True:  # initial loop ____________________________________________________
 
             # draw tile rectangle
             pygame.draw.rect(screen, color, (margin + (width + margin) * column, margin + (height + margin) * row, width, height))
-            # _tempFunct.draw_text(screen, myFont, margin + (width + margin) * column, margin + (height + margin) * row, str(partCheck[column][row]), c_yellow)
 
-    _tempFunct.draw_text(screen, myFont, 400, 400, str(sparkTimer), c_red)
+    # _tempFunct.draw_text(screen, myFont, 400, 400, str(sparkTimer), c_red)  # used for debug
 
     # check if something happened///////////////
     for event in pygame.event.get():
